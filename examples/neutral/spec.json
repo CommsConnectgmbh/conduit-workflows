@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "id": "neutral-example",
+  "fps": 30,
+  "lang": "en",
+  "theme": { "background": "#eef1f5", "panel": "#ffffff", "text": "#111827", "accent": "#2563eb" },
+  "media": {
+    "walk": { "path": "recording.mp4" }
+  },
+  "cuts": {
+    "long": {
+      "title": "Neutral example",
+      "posterScene": 2,
+      "scenes": [
+        { "kind": "card", "duration": 2.5, "caption": "Example walkthrough" },
+        { "kind": "clip", "media": "walk", "start": 0.8, "end": 3.6, "caption": "Open an item from the list." },
+        { "kind": "clip", "media": "walk", "start": 4.2, "end": 7.4, "caption": "Compare the photo with the fields." },
+        { "kind": "clip", "media": "walk", "start": 7.6, "end": 10.4, "caption": "Review the missing field." },
+        { "kind": "card", "duration": 2, "caption": "example.com" }
+      ]
+    },
+    "short": {
+      "title": "Neutral example (short)",
+      "posterScene": 1,
+      "scenes": [
+        { "kind": "card", "duration": 2, "caption": "Example walkthrough" },
+        { "kind": "clip", "media": "walk", "start": 4.2, "end": 7.4, "caption": "Compare photo and fields." },
+        { "kind": "clip", "media": "walk", "start": 7.6, "end": 9.8, "caption": "Find the confirmation button.", "layout": { "mode": "crop", "focusX": 0.5, "focusY": 0.75, "zoom": 1.2 } },
+        { "kind": "card", "duration": 1.5, "caption": "example.com" }
+      ]
+    }
+  }
+}

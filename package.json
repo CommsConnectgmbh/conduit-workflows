@@ -1,0 +1,33 @@
+{
+  "name": "conduit-video-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26.11.0 <27"
+  },
+  "packageManager": "npm@11.20.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/unit/*.test.ts",
+    "test:e2e": "node --test --test-concurrency=1 test/e2e/*.test.ts",
+    "studio": "remotion studio src/index.ts",
+    "record": "node scripts/record.ts",
+    "render": "node scripts/render.ts",
+    "example": "node scripts/example.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.536",
+    "@remotion/cli": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "playwright": "1.64.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.536"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}
