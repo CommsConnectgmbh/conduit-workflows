@@ -14,7 +14,8 @@
     "studio": "remotion studio src/index.ts",
     "record": "node scripts/record.ts",
     "render": "node scripts/render.ts",
-    "example": "node scripts/example.ts"
+    "example": "node scripts/example.ts",
+    "doctor": "node scripts/doctor.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.536",

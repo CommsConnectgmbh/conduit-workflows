@@ -59,3 +59,14 @@ guard.json
 *.srt
 *.vtt
 *.pdf
+
+# Explicitly curated public demo assets (only these; every other media file stays ignored)
+!docs/demo/neutral-source.mp4
+!docs/demo/neutral-long.mp4
+!docs/demo/neutral-short.mp4
+!docs/demo/neutral-preview.gif
+!docs/demo/neutral-poster.png
+!docs/demo/belegify-long.mp4
+!docs/demo/belegify-short.mp4
+!docs/demo/belegify-preview.gif
+!docs/demo/belegify-poster.png

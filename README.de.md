@@ -1,5 +1,11 @@
 # Conduit Workflows
 
+[![Echte Belegify-Aufnahme als fertiges Video](docs/demo/belegify-preview.gif)](docs/demo/belegify-long.mp4)
+
+**Ergebnis ansehen:** [Querformat](docs/demo/belegify-long.mp4) · [Hochformat](docs/demo/belegify-short.mp4) · [Beispiel mit Quellaufnahme](docs/demo/README.md)
+
+**Selbst ausprobieren:** Der [Einstieg mit kopierbaren Befehlen](QUICKSTART.md) beginnt mit einer mitgelieferten Aufnahme und führt anschließend zur eigenen App. Für den ersten Render brauchst du weder einen App-Login noch eine Conduit-Verbindung oder einen KI-API-Key.
+
 Echte App-Aufnahmen auf dem eigenen Rechner zu prüfbaren Erklärvideos und Kurzfassungen verarbeiten.
 
 Der erste Ablauf verbindet eine lokale Videospezifikation mit einem Remotion-Renderer. Er richtet sich an Produktentwickler, die einen echten App-Ablauf als Video im Querformat, eigenständig geschnittene Kurzfassung im Hochformat und Untertitel ausgeben möchten.

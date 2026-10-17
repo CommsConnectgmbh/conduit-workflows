@@ -1,0 +1,42 @@
+{
+  "belegify-long.mp4": {
+    "width": 1920,
+    "height": 1080,
+    "durationSeconds": "22.933333",
+    "frames": "688",
+    "sha256": "dcc3445369b9fae52540f7cfff1fee80972ba7c9a5938feb71430fe3ed83844c",
+    "bytes": 474998
+  },
+  "belegify-short.mp4": {
+    "width": 1080,
+    "height": 1920,
+    "durationSeconds": "15.100000",
+    "frames": "453",
+    "sha256": "f0a48b868f1a9e1a0efdd9639c664fe23e1311210602f19113efb2ad5f9364a9",
+    "bytes": 411928
+  },
+  "neutral-long.mp4": {
+    "width": 1920,
+    "height": 1080,
+    "durationSeconds": "13.300000",
+    "frames": "399",
+    "sha256": "fe1454b67c77d40e553bcde4d32e9b48fefbbba9daa0b3290bc9f052c5d7ad59",
+    "bytes": 260084
+  },
+  "neutral-short.mp4": {
+    "width": 1080,
+    "height": 1920,
+    "durationSeconds": "8.900000",
+    "frames": "267",
+    "sha256": "6b557d1faa2627ce1a5b20a1bee23ebc30df7bd21b7d79917f1299ecbbbd3629",
+    "bytes": 226463
+  },
+  "neutral-source.mp4": {
+    "width": 780,
+    "height": 1688,
+    "durationSeconds": "11.266016",
+    "frames": "338",
+    "sha256": "e4d3a693127f25e772828abc3d3dc4806d0c317d199bbc828eb777e1d008b128",
+    "bytes": 375042
+  }
+}

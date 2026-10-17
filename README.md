@@ -2,6 +2,12 @@
 
 Turn real app recordings into reviewable walkthroughs and short videos on your own computer.
 
+[![An actual Belegify app recording turned into a captioned walkthrough](docs/demo/belegify-preview.gif)](https://github.com/CommsConnectgmbh/conduit-workflows/blob/main/docs/demo/belegify-long.mp4)
+
+**See the result:** [landscape video](docs/demo/belegify-long.mp4) · [portrait short](docs/demo/belegify-short.mp4) · [reproducible example and source recording](docs/demo/README.md)
+
+**Try it:** [first-run guide](QUICKSTART.md) · [give feedback](https://github.com/CommsConnectgmbh/conduit-workflows/issues/new?template=first-run.md)
+
 This first workflow combines a local video specification with a Remotion renderer. It is intended for product builders who want to turn an actual application flow into a landscape walkthrough, a separately paced portrait clip, and caption files.
 
 Use it from a terminal, or ask your coding agent to run it through [Conduit](https://tryconduit.de). Conduit connects you to the agent on your own computer. This repository contains the video workflow; the [Conduit Bridge](https://github.com/CommsConnectgmbh/conduit-bridge) is a separate project.
@@ -16,6 +22,8 @@ See [WORKFLOW.md](WORKFLOW.md) for a task you can give your agent and the checks
 
 ## Licensing
 
+Source code and the neutral example are MIT licensed. The curated Belegify demo media have separate [sharing terms](docs/demo/README.md#reuse).
+
 Remotion has its own [license and eligibility rules](https://www.remotion.dev/docs/license/pricing). Its free license covers eligible individuals and organizations; company licensing can apply to other users. This repository cannot grant rights to third-party dependencies or to recordings supplied by users.
 
 ## Run locally
@@ -25,6 +33,7 @@ Install Node.js 26.11.0 (pinned in `.node-version`) and put `ffmpeg` and `ffprob
 ```sh
 npm ci
 npx playwright install chromium
+npm run doctor
 npm test
 npm run typecheck
 npm run test:e2e
@@ -32,6 +41,15 @@ npm run example -- --out ../conduit-video-example
 ```
 
 Use a new output directory for each recording. The example records the small local pages in `examples/neutral`; the resulting video is a technical example, not footage of a product.
+
+For a first render without recording anything, use the checked-in neutral source:
+
+```sh
+mkdir ../my-first-conduit-input && cp docs/demo/neutral-source.mp4 ../my-first-conduit-input/
+npm run render -- --spec docs/demo/spec.json --media-dir ../my-first-conduit-input --out ../my-first-conduit-video
+```
+
+Open `../my-first-conduit-video/neutral-example-long.mp4` and `neutral-example-short.mp4`. Both cuts include caption files and a JSON verification report. The [first-run guide](QUICKSTART.md) continues from this example to your own application.
 
 ## Record your application
 
