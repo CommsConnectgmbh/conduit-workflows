@@ -1,5 +1,7 @@
 # See the input and the result
 
+Durations below use a decimal comma: `22,933 s` means 22 seconds plus 933 milliseconds.
+
 ## A real product recording: Belegify
 
 [![Belegify walkthrough excerpt](belegify-preview.gif)](belegify-long.mp4)
@@ -21,6 +23,8 @@ Copy and the edit specification were prepared by Codex. A coding agent connected
 | [Edit specification](spec.json) | [Portrait](neutral-short.mp4), 1080 × 1920, 8,900 seconds |
 
 This recording shows the local pages in `examples/neutral`. It is a technical fixture, not a product or a customer account. After setup, run from the repository root:
+
+This is the same first run as the README and quickstart. If you already ran it, use its existing outputs or choose new input and output directory names.
 
 ```sh
 mkdir ../my-first-conduit-input && cp docs/demo/neutral-source.mp4 ../my-first-conduit-input/

@@ -4,7 +4,7 @@
 
 **Ergebnis ansehen:** [Querformat](docs/demo/belegify-long.mp4) · [Hochformat](docs/demo/belegify-short.mp4) · [Beispiel mit Quellaufnahme](docs/demo/README.md)
 
-**Selbst ausprobieren:** Der [Einstieg mit kopierbaren Befehlen](QUICKSTART.md) beginnt mit einer mitgelieferten Aufnahme und führt anschließend zur eigenen App. Für den ersten Render brauchst du weder einen App-Login noch eine Conduit-Verbindung oder einen KI-API-Key.
+**Selbst ausprobieren:** Der [englische Einstieg mit kopierbaren Befehlen](QUICKSTART.md) beginnt mit einer mitgelieferten Aufnahme und führt anschließend zur eigenen App. Für den ersten Render brauchst du weder einen App-Login noch eine Conduit-Verbindung oder einen KI-API-Key.
 
 Echte App-Aufnahmen auf dem eigenen Rechner zu prüfbaren Erklärvideos und Kurzfassungen verarbeiten.
 
@@ -22,6 +22,8 @@ Der erste Pilot arbeitet mit Texteinblendungen ohne Sprecher. Die Videopipeline 
 
 ## Lizenzen
 
+Der Quelltext und das neutrale Beispiel sind MIT-lizenziert. Für die kuratierten Belegify-Demomedien gelten gesonderte [Nutzungsbedingungen](docs/demo/README.md#reuse).
+
 Für Remotion gelten eigene [Lizenzbedingungen](https://www.remotion.dev/docs/license/pricing). Die kostenlose Lizenz gilt für berechtigte Einzelpersonen und Organisationen; bei anderen Nutzern kann eine Firmenlizenz erforderlich sein. Dieses Repository erteilt keine Rechte an fremden Abhängigkeiten oder beigesteuerten Aufnahmen.
 
 ## Lokal ausführen
@@ -31,6 +33,7 @@ Voraussetzungen: Node.js 26.11.0 (in `.node-version` festgelegt) sowie `ffmpeg` 
 ```sh
 npm ci
 npx playwright install chromium
+npm run doctor
 npm test
 npm run typecheck
 npm run test:e2e
@@ -38,6 +41,15 @@ npm run example -- --out ../conduit-video-example
 ```
 
 Verwende für jede Aufnahme einen neuen Ausgabeordner. Das neutrale Beispiel nimmt die kleinen lokalen Seiten in `examples/neutral` auf. Der daraus erzeugte Film ist ein technisches Beispiel und zeigt kein echtes Produkt.
+
+Du kannst auch direkt mit der mitgelieferten Aufnahme rendern:
+
+```sh
+mkdir ../my-first-conduit-input && cp docs/demo/neutral-source.mp4 ../my-first-conduit-input/
+npm run render -- --spec docs/demo/spec.json --media-dir ../my-first-conduit-input --out ../my-first-conduit-video
+```
+
+Das ist derselbe erste Durchlauf wie im englischen Einstieg und auf der Demoseite. Wenn du ihn dort schon ausgeführt hast, öffne die vorhandenen Ergebnisse oder wähle neue Ordnernamen. Die MP4-Dateien heißen `neutral-example-long.mp4` und `neutral-example-short.mp4`.
 
 ## Eigene Anwendung aufnehmen
 
@@ -72,3 +84,5 @@ Jeder Schnitt liefert ein H.264-MP4, SRT- und VTT-Untertitel, ein Vorschaubild, 
 Aufnahmeplan, Schnittplan und Texte sind ausdrückliche Eingaben. Der erste Pilot beginnt mit vorbereiteten Aufnahmen und einer geschriebenen Spezifikation. Conduit stellt die Verbindung zum Coding-Agenten her, der die lokalen Befehle ausführt. Der Ablauf lässt sich auch direkt im Terminal starten.
 
 Die Integrationstests prüfen mit echtem Chromium und FFmpeg die Aufnahmegeometrie, das blickdichte Ausblenden von DOM-Inhalten, Schnittgrenzen, Untertitelzeiten und den Erhalt vorhandener Ergebnisse. Die DOM-Maskierung erfasst konfigurierte Elemente und passende Texte. Bildpixel und Canvas-Inhalte brauchen eine gesonderte Sichtprüfung.
+
+[English version](README.md)

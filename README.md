@@ -44,6 +44,8 @@ Use a new output directory for each recording. The example records the small loc
 
 For a first render without recording anything, use the checked-in neutral source:
 
+This is the same first run as in the guide and demo page; run it once. If you already tried it, inspect the existing outputs or choose new input and output directory names.
+
 ```sh
 mkdir ../my-first-conduit-input && cp docs/demo/neutral-source.mp4 ../my-first-conduit-input/
 npm run render -- --spec docs/demo/spec.json --media-dir ../my-first-conduit-input --out ../my-first-conduit-video

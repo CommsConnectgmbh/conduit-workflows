@@ -16,7 +16,11 @@ npm run doctor
 
 The diagnostic reports missing tools and exits unsuccessfully if a prerequisite is missing. It does not install anything.
 
+Keep network access available during setup and the first render: on a fresh installation, Remotion also downloads its own rendering browser.
+
 ## 2. Render the included recording
+
+This is the same first run shown in the README and demo page. If you already ran it there, continue with step 3 or choose fresh input and output directory names.
 
 ```sh
 mkdir ../my-first-conduit-input && cp docs/demo/neutral-source.mp4 ../my-first-conduit-input/
